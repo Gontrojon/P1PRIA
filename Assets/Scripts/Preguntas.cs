@@ -7,7 +7,7 @@ using UnityEngine;
 public class Preguntas
 {
     public int response_code;
-    public List<Preguntas> results;
+    public List<Pregunta> results;
     
     // metodo que realiza la asignacion de los datos con la llamada a la utilidad de unity
     public static Preguntas CreateFromJSON(string jsonString)

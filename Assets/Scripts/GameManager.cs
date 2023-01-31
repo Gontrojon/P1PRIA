@@ -44,6 +44,30 @@ public class GameManager : MonoBehaviour
                     Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
                     break;
             }
+             // guardamos en un string la respuesta 
+            string jsonString = webRequest.downloadHandler.text;
+            
+            // creamos la clase que almacenara todos los datos
+            Preguntas pre = Preguntas.CreateFromJSON(jsonString);
+    
+            // entero para iterar el nº de pregunta
+            int preguntaN = 0;
+            // recorremos los resultados y arrojamos lo que contiene
+            foreach (Pregunta pregunta in pre.results)
+            {
+                preguntaN++;
+                Debug.Log($"Pregunta numero : {preguntaN}");
+                Debug.Log($"Categoria: {pregunta.category}");
+                //Debug.Log(respuestas.type);
+                Debug.Log($"Dificultad: {pregunta.difficulty}");
+                Debug.Log($"Pregunta: {pregunta.question}");
+                Debug.Log("Respuestas");
+                Debug.Log(pregunta.correct_answer);
+                for (int i = 0; i < pregunta.incorrect_answers.Length; i++)
+                {
+                    Debug.Log(pregunta.incorrect_answers[i]);
+                }
+            }
         }
     }
 }

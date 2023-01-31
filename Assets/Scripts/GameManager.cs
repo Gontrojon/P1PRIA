@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour
                 preguntaN++;
                 Debug.Log($"Pregunta numero : {preguntaN}");
                 Debug.Log($"Categoria: {pregunta.category}");
-                //Debug.Log(respuestas.type);
                 Debug.Log($"Dificultad: {pregunta.difficulty}");
                 Debug.Log($"Pregunta: {pregunta.question}");
                 Debug.Log("Respuestas");

@@ -47,10 +47,10 @@ public class GameManager : MonoBehaviour
                     Preguntas pre = Preguntas.CreateFromJSON(jsonString);
                     // Salida de el numero de preguntas solicitada
                     Debug.Log($"Numero de preguntas solicitadas: {pre.results.Count}");
-                    Debug.Log($"Categoria: {pre.results[1].category}");
-                    Debug.Log($"Dificultad: {pre.results[1].difficulty}");
-                    Debug.Log($"Pregunta: {pre.results[1].question}");
-                    Debug.Log($"Respuesta Correcta: {pre.results[1].correct_answer}");
+                    Debug.Log($"Categoria: {pre.results[0].category}");
+                    Debug.Log($"Dificultad: {pre.results[0].difficulty}");
+                    Debug.Log($"Pregunta: {pre.results[0].question}");
+                    Debug.Log($"Respuesta Correcta: {pre.results[0].correct_answer}");
                     break;
             }
             

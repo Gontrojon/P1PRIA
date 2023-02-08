@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        apiURL = "https://opentdb.com/api.php?amount=10&category=20&type=multiple"
+        apiURL = "https://opentdb.com/api.php?amount=10&category=20&type=multiple";
         // Iniciar una corrutina para pedir los datos a una api de una web pasando como parametro la llmada get
         StartCoroutine(GetRequest(apiURL));
     }
